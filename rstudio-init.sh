@@ -31,7 +31,7 @@ echo "Checking R version..."
 R --version
 
 # Install in order to use RCurl & XML
-aptitude install libcurl4-openssl-dev
+aptitude --assume-yes install libcurl4-openssl-dev
 apt-get -y install libxml2-dev
 
 # http://www.rstudio.com/ide/download/server
