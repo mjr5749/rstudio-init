@@ -4,8 +4,8 @@
 export DEBIAN_FRONTEND=noninteractive
 
 # Install DVCS tools
-apt-get -y install git
-apt-get -y install mercurial
+apt-get --assume-yes install git
+apt-get --assume-yes install mercurial
 
 # Create a user, home directory and set password
 # This will be used to login to rstudio-server and the home directory
@@ -16,26 +16,30 @@ mkdir /home/rstudio
 passwd rstudio
 chmod -R 0777 /home/rstudio
 
+# Ubuntu Packages for R
+# http://cran.r-project.org/bin/linux/ubuntu/README.html
+
 # Add CRAN mirror for r-base
 sh -c 'echo "deb http://cran.rstudio.org/bin/linux/ubuntu raring/" >> /etc/apt/sources.list'
 
+# Add GPG key for R packages
+apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9
+
 # Update files to use CRAN mirror
-# Don't worry about error message
-apt-get -y update
+apt-get --assume-yes update
 
 # Install latest version of R
-# Install without verification
-apt-get -y --force-yes install r-base
+apt-get --assume-yes install r-base
 
 echo "Checking R version..."
 R --version
 
 # Install in order to use RCurl & XML
 aptitude --assume-yes install libcurl4-openssl-dev
-apt-get -y install libxml2-dev
+apt-get --assume-yes install libxml2-dev
 
 # http://www.rstudio.com/ide/download/server
-apt-get -y install gdebi-core
-apt-get -y install libapparmor1  # Required only for Ubuntu, not Debian
+apt-get --assume-yes install gdebi-core
+apt-get --assume-yes install libapparmor1  # Required only for Ubuntu, not Debian
 wget http://download2.rstudio.org/rstudio-server-0.97.551-amd64.deb
 gdebi --non-interactive rstudio-server-0.97.551-amd64.deb
