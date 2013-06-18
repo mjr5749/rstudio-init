@@ -1,7 +1,8 @@
 rstudio-init
 ============
 
-Quickly install R, rstudio-server, Mercurial and Git tools on a fresh AWS Ubuntu server.
+Quickly install R, rstudio-server, Mercurial and Git tools on a fresh AWS Ubuntu server.  This has been tested with the 
+Ubuntu Server 13.04 AMI.
 
 Usage
 -----
