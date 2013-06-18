@@ -24,7 +24,7 @@ apt-get -y update
 
 # Install latest version of R
 # Install without verification
-apt-get -y install r-base
+apt-get -y --force-yes install r-base
 
 # Install in order to use RCurl & XML
 aptitude install libcurl4-openssl-dev
