@@ -20,4 +20,4 @@ RStudio server will run on port 8787 by default.  Connect to your server via ssh
 
     ssh -i aws-key.pem ubuntu@hostname.amazonaws.com -L 8787:localhost:8787
     
-You should now be able to log in to RStudio Server at http://localhost:8787.
+You should now be able to log in to RStudio Server at [http://localhost:8787](http://localhost:8787).
