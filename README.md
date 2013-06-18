@@ -1,7 +1,7 @@
 rstudio-init
 ============
 
-Quickly install R, rstudio-server, and DVCS tools on a fresh AWS Ubuntu server.
+Quickly install R, rstudio-server, Mercurial and Git tools on a fresh AWS Ubuntu server.
 
 Usage
 -----
@@ -11,10 +11,10 @@ Usage
     $ sudo ./rstudio-init.sh
 
 As part of the installation, you will be prompted to set the password for the rstudio user.  You will use this password 
-later to log into the rstudio-server web UI.
+later to log into the rstudio-server web UI.  The remainder of the setup can run unattended.
 
-Accessing RStudio Server
-------------------------
+Accessing RStudio Server Over an SSH Tunnel
+-------------------------------------------
 
 RStudio server will run on port 8787 by default.  Connect to your server via ssh with a port tunneling argument:
 
