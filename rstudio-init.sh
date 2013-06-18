@@ -10,6 +10,7 @@ apt-get -y install mercurial
 # Create a user, home directory and set password
 # This will be used to login to rstudio-server and the home directory
 # will contain the rstudio workspace.
+echo "Creating 'rstudio' user..."
 useradd rstudio
 mkdir /home/rstudio
 passwd rstudio
