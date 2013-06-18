@@ -34,4 +34,4 @@ apt-get -y install libxml2-dev
 apt-get -y install gdebi-core
 apt-get -y install libapparmor1  # Required only for Ubuntu, not Debian
 wget http://download2.rstudio.org/rstudio-server-0.97.551-amd64.deb
-gdebi rstudio-server-0.97.551-amd64.deb
+gdebi --non-interactive rstudio-server-0.97.551-amd64.deb
