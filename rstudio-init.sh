@@ -3,10 +3,6 @@
 # http://serverfault.com/questions/227190/how-do-i-ask-apt-get-to-skip-any-interactive-post-install-configuration-steps
 export DEBIAN_FRONTEND=noninteractive
 
-# Install DVCS tools
-apt-get --assume-yes install git
-apt-get --assume-yes install mercurial
-
 # Create a user, home directory and set password
 # This will be used to login to rstudio-server and the home directory
 # will contain the rstudio workspace.
@@ -15,6 +11,10 @@ useradd rstudio
 mkdir /home/rstudio
 passwd rstudio
 chmod -R 0777 /home/rstudio
+
+# Install DVCS tools
+apt-get --assume-yes install git
+apt-get --assume-yes install mercurial
 
 # Ubuntu Packages for R
 # http://cran.r-project.org/bin/linux/ubuntu/README.html
